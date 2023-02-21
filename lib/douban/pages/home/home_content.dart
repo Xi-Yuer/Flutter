@@ -1,3 +1,4 @@
+import 'package:demo/douban/pages/home/widget/movie_item.dart';
 import 'package:demo/douban/service/api/home/index.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,7 @@ class _HomeContentState extends State<HomeContent> {
         child: ListView.builder(
             itemCount: movies.length,
             itemBuilder: (ctx, index) {
-              return Image.network(movies[index].cover_url);
+              return MovieItemWidget(movies[index],index);
             }));
   }
 }
